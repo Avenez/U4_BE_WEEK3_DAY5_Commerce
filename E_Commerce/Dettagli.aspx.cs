@@ -30,11 +30,11 @@ namespace E_Commerce
                 Response.Redirect("Login");
             }
 
-            string idProdottoSum = Request.QueryString["idProdotto"];
+            string idProdottoSum = Request.QueryString["idProdottoSum"];
 
             if (idProdottoSum != null)
             {
-                UpdateCart(idProdotto);
+                UpdateCart(idProdottoSum);
             }
 
         }
@@ -46,11 +46,11 @@ namespace E_Commerce
                             $"</div>\r\n" +
                                 $"<div class=\"col\">\r\n" +
                                     $"<div class=\"row-col-1\">\r\n" +
-                                        $"<div class=\"col-10\">\r\n" +
+                                        $"<div class=\"col text-center\">\r\n" +
                                         $"<h1 class=\"display-1 text-white bg-dark ps-5 pb-2 rounded-pill\">{prodotto.nome}</h1>\r\n" +
                                         $"</div>\r\n" +
 
-                                        $"<div class=\"col-5\">\r\n" +
+                                        $"<div class=\"col text-center\">\r\n" +
                                         $"<h2 class=\"display-2 text-white bg-dark ps-5 pb-2 rounded-pill\">{prodotto.prezzo} €</h2>\r\n" +
                                         $"</div>\r\n" +
 
@@ -58,10 +58,13 @@ namespace E_Commerce
                                         $"<h2 class=\"display-2 ps-5\">{prodotto.descrizione}</h2>\r\n" +
                                         $"</div>\r\n" +
 
+                                        $"<div class=\"col-12 ps-5 mt-5\">\r\n" +
+                                        $"<a href=\'Dettagli?idProdotto={prodotto.id}&idProdottoSum={prodotto.id}\' class=\"btn btn-primary\"> <i class=\"bi bi-cart-plus\"></i> Add to Cart</a>\r\n" +
+                                        $"</div>\r\n" +
 
-                       
+
                             $"</div>\r\n\r\n" +
-                            $"<a href=\'Dettagli?idProdotto={prodotto.id}&idProdottoSum={prodotto.id}\' class=\"btn btn-primary\"> <i class=\"bi bi-cart-plus\"></i> Add to Cart</a>\r\n" +
+                            
                     $"</div>";
         }
 

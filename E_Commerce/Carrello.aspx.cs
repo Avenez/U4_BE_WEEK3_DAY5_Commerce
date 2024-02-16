@@ -93,9 +93,9 @@ namespace E_Commerce
                    $"<div class=\"card-body \">\r\n" +
                    $"<h4>{prodotto.qta} x {prodotto.nome}</h4>\r\n" +
                    $"<div class=\"d-flex \">\r\n" +
-                   $"<a  href=\'Carrello?idProdottoSub={prodotto.id}\' class=\"btn btn-danger me-3\"> - </a>\r\n" +
+                   $"<a  href=\'Carrello?idProdottoSub={prodotto.id}\' class=\"btn btn-danger me-3\"><i class=\"bi bi-dash-circle\"></i></a>\r\n" +
                    $"<h5 class=\"me-3 \" >{prodotto.prezzo * prodotto.qta}€</h5>\r\n" +
-                   $"<a href=\'Carrello?idProdottoSum={prodotto.id}\' class=\"btn btn-success\"> + </a>\r\n" +
+                   $"<a href=\'Carrello?idProdottoSum={prodotto.id}\' class=\"btn btn-success\"><i class=\"bi bi-plus-circle\"></i></a>\r\n" +
                    $"</div>\r\n" +
                    $"</div>\r\n" +
                    $"</div>\r\n" +
